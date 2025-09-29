@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanuja Jananajith Kariyawasam - Molecular Biology Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family:'Poppins',sans-serif;
+      background:#f7fafd;
+      color:#333;
+      scroll-behavior:smooth;
+      overflow-x:hidden;
+    }
+
+    /* Animated molecular background */
+    #particles-js {
+      position:fixed;
+      top:0;left:0;width:100%;height:100%;
+      z-index:-1;
+      background:linear-gradient(135deg,#dff6ff,#f7fafd);
+    }
+
+    nav {
+      position:fixed;top:0;width:100%;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(10px);
+      display:flex;justify-content:center;gap:30px;
+      padding:15px 0;z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+    nav a {
+      text-decoration:none;color:#0088cc;
+      font-weight:600;letter-spacing:1px;
+      transition:color 0.3s ease;
+    }
+    nav a:hover {color:#00c6ff;}
+
+    header {
+      min-height:100vh;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:20px;
+    }
+    header img {
+      width:150px;height:150px;border-radius:50%;
+      border:4px solid #00c6ff;margin-bottom:20px;
+      box-shadow:0 0 20px rgba(0,198,255,0.3);
+      animation:float 4s ease-in-out infinite;
+    }
+    @keyframes float {0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);}}
+
+    header h1 {font-size:2.4rem;color:#0088cc;margin-bottom:5px;}
+    header h2 {font-size:1.1rem;color:#555;}
+
+    section {
+      max-width:900px;margin:80px auto;padding:40px 25px;
+      background:rgba(255,255,255,0.85);
+      border-radius:20px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.05);
+      opacity:0;transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+    section.visible {opacity:1;transform:translateY(0);}
+    section h2 {
+      text-align:center;color:#0088cc;margin-bottom:15px;
+      font-size:1.8rem;
+      position:relative;
+    }
+    section h2::after {
+      content:"";
+      position:absolute;bottom:-5px;left:50%;
+      transform:translateX(-50%);
+      width:50px;height:3px;background:#00c6ff;
+      border-radius:5px;
+    }
+
+    ul {list-style:none;padding-left:0;}
+    li {margin-bottom:8px;}
+
+    /* Resume button */
+    .button {
+      display:inline-block;
+      padding:12px 25px;
+      margin-top:15px;
+      color:white;
+      background:linear-gradient(135deg,#00c6ff,#00ffaa);
+      font-weight:700;border-radius:8px;
+      box-shadow:0 4px 15px rgba(0,198,255,0.3);
+      transition:transform 0.3s ease;
+      text-decoration:none;
+    }
+    .button:hover {transform:scale(1.05);}
+    .contact p {text-align:center;margin:5px 0;}
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+  <a href="HS25510285.pdf" class="button" download>Download CV</a>
+</nav>
+
+<header>
+  <img src="Untitled-3.jpg" alt="Vanuja Jananajith Kariyawasam">
+  <h1>Vanuja Jananajith Kariyawasam</h1>
+  <h2>Biotechnology Undergraduate | Molecular Science Enthusiast</h2>
+</header>
+
+<section id="about" class="animate">
+  <h2>About Me</h2>
+  <p>I am a Biotechnology student with well-gained experiences in laboratory and academics. I manage workloads effectively, supported by my background as a sports person and a high GPA. My goal is to apply scientific insight to contribute meaningfully to innovative molecular science research and pursue a PhD, specializing in advanced molecular techniques like PCR and data interpretation.</p>
+</section>
+
+<section id="education" class="animate">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>BSc (Hons) in Biotechnology</strong> – Sri Lanka Institute of Information Technology (SLIIT), 2025–2029 (Expected)</li>
+    <li><strong>Advanced Level:</strong> Mahinda College (2021–2024) – 1C, 2S</li>
+    <li><strong>Ordinary Level:</strong> Mahinda College – 6As, 2Bs, 1C</li>
+  </ul>
+</section>
+
+<section id="skills" class="animate">
+  <h2>Skills & Languages</h2>
+  <ul>
+    <li>Research and Data Analysis</li>
+    <li>Laboratory Techniques (PCR, Gel Electrophoresis)</li>
+    <li>Analytical Thinking</li>
+    <li>Languages: English, Sinhala</li>
+  </ul>
+</section>
+
+<section id="contact" class="animate contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:jjanajithkariyawasam@gmail.com">jjanajithkariyawasam@gmail.com</a></p>
+  <p>Phone: +94 766004315</p>
+  <p>Address: 4/12B, Hirimbura Cross Road, Galle</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  // Particle animation
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {"value": 60},
+      "color": {"value": "#00c6ff"},
+      "shape": {"type": "circle"},
+      "opacity": {"value": 0.4},
+      "size": {"value": 3},
+      "line_linked": {"enable": true,"distance": 150,"color": "#00ffaa","opacity": 0.4,"width": 1},
+      "move": {"enable": true,"speed": 2,"direction": "none"}
+    }
+  });
+
+  // Scroll reveal
+  const sections=document.querySelectorAll('.animate');
+  function reveal() {
+    const trigger=window.innerHeight*0.85;
+    sections.forEach(sec=>{
+      const top=sec.getBoundingClientRect().top;
+      if(top<trigger) sec.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll',reveal);
+  window.addEventListener('load',reveal);
+</script>
+
+</body>
+</html>
